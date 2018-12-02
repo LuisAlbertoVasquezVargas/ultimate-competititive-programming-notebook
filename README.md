@@ -8,7 +8,7 @@ Todo(luisvasquez): To add bio.
 ## Inspiration
 Programming competitions are exciting, but also can be very challenging. Competitive Programming (CP) is not just algorithm design is abouth their implementation, is not only about technical stuff is about also of discipline (phisical and menthal).
 As we can see CP is a complex problem. I want to think of competitive programming as an extension of mathematical competitions.
-That's why world champions have very strong mathematical backgrounds.
+That's why that is not a surprise that world champions in this competition have very strong mathematical backgrounds.
 When participating in a contest often we need reliable code to use and most importantly guidelines to build code.
 
 ## Tradeoffs in CP
