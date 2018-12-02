@@ -23,4 +23,7 @@ When participating in a contest often we need reliable code to use and most impo
 - Test-driven development.
 - Generality balance.
 
+## Demystifying CP
+TODO(luisvasquez): Add video.
+
 TODO(luisvasquez): Add more principles.
