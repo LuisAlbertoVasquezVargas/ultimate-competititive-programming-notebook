@@ -23,10 +23,14 @@ bool isPrime(Long n) {
   return true;
 }
 
-void test(Long num) { cout << num << " " << isPrime(num) << '\n'; }
+void test(Long num) { 
+  cout << num << " " << isPrime(num) << '\n'; 
+}
 
 int main() {
-  REP(i, 100) { test(i + 1); }
+  REP(i, 100) { 
+    test(i + 1); 
+  }
   test(1000000000000000);
   test((int)1e9 + 7);
 }

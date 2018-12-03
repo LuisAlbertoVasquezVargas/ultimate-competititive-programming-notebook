@@ -20,10 +20,12 @@ void sieve() {
 }
 
 void test(int num) { 
-	cout << num << " " << prime.test(num) << '\n'; 
+  cout << num << " " << prime.test(num) << '\n'; 
 }
 
 int main() {
   sieve();
-  REP(i, 100) { test(i + 1); }
+  REP(i, 100) { 
+    test(i + 1); 
+  }
 }
