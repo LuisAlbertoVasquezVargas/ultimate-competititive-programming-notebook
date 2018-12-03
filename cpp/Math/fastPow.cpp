@@ -16,5 +16,5 @@ Long fastPow(Long a, Long b, Long c) {
 }
 
 int main() {
-	
+  
 }
