@@ -1,49 +1,58 @@
 
-void sieve() {
-  P = vInt(N + 1, -1);  // TODO(luisvasquez): to rename p, and handle N ass parameter.
-  P[0] = P[1] = 0;
-  for (int i = 2; i * i <= N; ++i) {
-    if (P[i] == -1) {
-      for (int j = i * i; j <= N; j += i) {
-        P[j] = i;
+struct Math {
+  vInt smallestFactor;
+  Math() {}
+  Math(int max_n) { 
+    sieve(max_n); 
+  }
+
+  void sieve(int max_n) {
+    smallestFactor = vInt(max_n + 1, -1);  // TODO(luisvasquez): to change this line to something more readable.
+    smallestFactor[0] = smallestFactor[1] = 0;
+    for (int i = 2; i * i <= max_n; ++i) {
+      if (smallestFactor[i] == -1) {
+        for (int j = i * i; j <= max_n; j += i) {
+          smallestFactor[j] = i;
+        }
       }
     }
   }
-}
 
-void primefact(int n, vInt &pr, vInt &ex) {
-  while (true) {
-    int p = P[n];
-    if (n == 1) {
-      return;
-    }
+  void primefact(int num, vInt &pr, vInt &ex) {
+    while (true) {
+      int p = smallestFactor[num];
+      if (num == 1) {
+        return;
+      }
 
-    if (p == -1) {
-      pr.push_back(n);
-      ex.push_back(1);
-      break;
+      if (p == -1) {
+        pr.push_back(num);
+        ex.push_back(1);
+        break;
+      }
+      int exp = 0;
+      while (num % p == 0) {
+        exp++;
+        num /= p;
+      }
+      pr.push_back(p);
+      ex.push_back(exp);
     }
-    int exp = 0;
-    while (n % p == 0) {
-      exp++;
-      n /= p;
-    }
-    pr.push_back(p);
-    ex.push_back(exp);
   }
-}
 
-vInt getAllDivisors(vInt pr, vInt ex) {
-  int k = SZ(pr);
-  vInt divisors(1, 1);
+  vInt getDivisors(vInt primes, vInt exps) {
+    vInt divisors = {1};
 
-  REP(i, k) {
-    int m = SZ(divisors);
-    REP(j, ex[i]) {
-      REP(a, m) { 
-        divisors.push_back(pr[i] * divisors[a + j * m]); 
+    REP (index, SZ(primes)) {
+      int prime = primes[index];
+      int exp = exps[index];
+      int curLen = SZ(divisors);
+      REP (e, exp) {
+        REP (ptr, curLen) { 
+          divisors.push_back(prime * divisors[ptr + e * curLen]); 
+        }
       }
     }
+    return divisors;
   }
-  return divisors;
-}
+};
