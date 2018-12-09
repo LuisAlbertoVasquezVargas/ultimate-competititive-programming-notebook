@@ -1,8 +1,8 @@
 struct UnionFind {
   vInt parent;
   void initUF(int n) {
-    parent = vInt(n);
-    REP(i, n) { 
+    parent.resize(n);
+    REP (i, n) { 
       parent[i] = i; 
     }
   }

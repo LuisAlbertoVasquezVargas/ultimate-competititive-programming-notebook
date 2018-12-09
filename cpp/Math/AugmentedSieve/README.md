@@ -41,3 +41,7 @@ https://www.codechef.com/viewsolution/4158444
 https://codeforces.com/problemset/problem/547/C
 https://codeforces.com/contest/547/submission/11310219
 (Deprecated code)
+
+
+// TODO(luisvasquez) : to order links on a table.
+// TODO(luisvasquez) : to update deprecated code.
