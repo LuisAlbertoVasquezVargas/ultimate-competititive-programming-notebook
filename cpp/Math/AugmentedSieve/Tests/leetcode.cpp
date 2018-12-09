@@ -21,12 +21,12 @@ struct Math {
   }
 
   void sieve(int max_n) {
-    smallestFactor = vInt(max_n + 1, -1);  // TODO(luisvasquez): to rename p.
+    smallestFactor.assign(max_n + 1, -1);
     smallestFactor[0] = smallestFactor[1] = 0;
-    for (int i = 2; i * i <= max_n; ++i) {
-      if (smallestFactor[i] == -1) {
-        for (int j = i * i; j <= max_n; j += i) {
-          smallestFactor[j] = i;
+    for (int p = 2; p * p <= max_n; ++p) {
+      if (smallestFactor[p] == -1) {
+        for (int mult = p * p; mult <= max_n; mult += p) {
+          smallestFactor[mult] = p;
         }
       }
     }

@@ -11,4 +11,3 @@
 -TODO(luisvasquez): test this version, improve their code.
 
 ## augmentedSieve
--TODO(luisvasquez): test this version, improve their code.
