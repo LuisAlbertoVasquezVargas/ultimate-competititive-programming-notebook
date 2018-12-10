@@ -1,17 +1,10 @@
-#Topics
-
-## Graph
-
-### Union Find.
-
-## Math
-### fastPow
-
-### sieve
-  With eratosthenes's sieve we can see if a number is a prime (primality test) or to factorize it.
-#### simpleSieve
-
-#### augmentedSieve
-
-### primality
+# Table of Contents
+* [Graph]()
+  * [Union-Find]()
+* [Math]()
+  * [FastPow]()
+  * [Sieve]()
+    * [Classic Sieve]()
+    * [Extended Sieve]()
+  * [Primality]()
 
