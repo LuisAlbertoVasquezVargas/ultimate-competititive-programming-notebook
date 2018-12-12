@@ -1,4 +1,4 @@
-
+// TODO(luisvasquez): to test again due changes.
 struct Math {
   vInt smallestFactor;
   Math() {}
@@ -19,24 +19,21 @@ struct Math {
   }
 
   void primefact(int num, vInt &pr, vInt &ex) {
-    while (true) {
+    while (num != 1) {
       int p = smallestFactor[num];
-      if (num == 1) {
-        return;
-      }
-
       if (p == -1) {
         pr.push_back(num);
         ex.push_back(1);
         break;
+      } else {
+        int exp = 0;
+        while (num % p == 0) {
+          exp++;
+          num /= p;
+        }
+        pr.push_back(p);
+        ex.push_back(exp);
       }
-      int exp = 0;
-      while (num % p == 0) {
-        exp++;
-        num /= p;
-      }
-      pr.push_back(p);
-      ex.push_back(exp);
     }
   }
 
