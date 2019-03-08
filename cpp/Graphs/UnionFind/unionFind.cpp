@@ -14,5 +14,7 @@ struct UnionFind {
   }
 };
 
-// TODO(luisvasquez) review if it worths to use ranked unionFind. It needs more
+// TODO(luisvasquez) : review if it worths to use ranked unionFind. It needs more
 // testing.
+
+// TODO(luisvasquez) : instead of using unitUF to init the DS use a constructor.
