@@ -9,3 +9,4 @@ typedef vector<Pair> vPair;
 #define REP(i,n) for(int i = 0; i < n; i++)
 #define ALL(v) v.begin(), v.end()
 #define SZ(v) (int)v.size()
+#define PB push_back

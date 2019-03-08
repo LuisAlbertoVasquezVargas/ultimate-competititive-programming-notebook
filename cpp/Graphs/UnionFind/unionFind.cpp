@@ -2,9 +2,7 @@ struct UnionFind {
   vInt parent;
   void initUF(int n) {
     parent.resize(n);
-    REP (i, n) { 
-      parent[i] = i; 
-    }
+    iota(ALL(parent), 0);
   }
 
   int find(int x) { 
