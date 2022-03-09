@@ -1,10 +1,10 @@
-struct flowGraph {
+struct FlowGraph {
   int n, m, s, t, E;
   const int INF = INT_MAX / 2;
   vInt to, cap, NEXT;    // maxe * 2
   vInt last, now, dist;  // maxv
-  flowGraph() {}
-  flowGraph(int n, int m, int s, int t) : n(n), m(m), s(s), t(t) {
+  FlowGraph() {}
+  FlowGraph(int n, int m, int s, int t) : n(n), m(m), s(s), t(t) {
     // TODO(luisvasquez) : to investigate about NEXT variable.
     to = cap = NEXT = vInt(2 * m + 5);
     last = now = dist = vInt(n + 5);
