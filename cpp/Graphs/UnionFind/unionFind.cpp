@@ -15,6 +15,5 @@ struct UnionFind {
 };
 
 // TODO(luisvasquez) : review if it worths to use ranked unionFind. It needs more testing.
-// TODO(luisvasquez) : review about unionFind that also returns the number of nodes on each component.
 // TODO(luisvasquez) : review if it's conveniet to check x & y are the same on unite method
 

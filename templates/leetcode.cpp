@@ -1,4 +1,5 @@
 typedef long long Long;
+typedef vector<Long> vLong;
 typedef vector<int> vInt;
 typedef vector<vInt> vvInt;
 typedef vector<vvInt> vvvInt;

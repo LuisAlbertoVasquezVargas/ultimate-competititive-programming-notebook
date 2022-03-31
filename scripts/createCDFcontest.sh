@@ -1,4 +1,4 @@
-contestname="CDF_DIV3_123";
+contestname="CDF_DIV3_780";
 mkdir ${contestname}
 cp ../templates/codeforces.cpp "./${contestname}/A.cpp"
 cp ../templates/codeforces.cpp "./${contestname}/B.cpp"
