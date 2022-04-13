@@ -96,13 +96,13 @@ void debug_out(Head H, Tail... T) {
   debug_out(T...);
 }
 #define DEBUG(...) cout << "[" << #__VA_ARGS__ << "]:", debug_out(__VA_ARGS__)
-#define SLASH() cout << "********************************************************";
+#define SLASH() cout << "********************************************************" << endl;
 
 template<class T> bool ckmin(T& a, const T& b) { return b < a ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 void solve() {
-    
+  
 }
 
 int main() {
